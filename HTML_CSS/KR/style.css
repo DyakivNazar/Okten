@@ -303,27 +303,23 @@ main>button{
     font-weight: 400;
 }
 
-
+/*зробити flex*/
 footer{
     height: 435px;
     background-color: #E4E5E9;
-    padding-top: 70px;
 }
 .contact_block{
     width: 1249px;
     height: 245px;
-    margin: 0 auto 0 auto;
     background-color: aqua;
 }
 
 footer hr{
     width: 1249px;
-    margin: 50px auto 26px auto;
     border: 1px solid #C0C0C0;
 }
 footer p{
     color: #2B2C34;
     font-size: 14px;
     font-weight: 400;
-    margin-left: 95px;
 }
