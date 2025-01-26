@@ -60,7 +60,7 @@ nav a, .search_block button{
 }
 
 
-.section-1{
+#section-1{
     height: 1314px;
     background: #EFF0F3;
     display: flex;
@@ -260,7 +260,7 @@ main>button{
 }
 
 
-.section-2{
+#section-2{
     height: 453px;
     display: flex;
     justify-content: center;
@@ -301,22 +301,74 @@ main>button{
     color: #C0C0C0;
     font-size: 20px;
     font-weight: 400;
+    text-transform: none;
 }
 
-/*зробити flex*/
+
 footer{
     height: 435px;
     background-color: #E4E5E9;
+    display: flex;
+    justify-content: center;
+    padding-top: 70px;
+}
+.footer_block{
+    width: 1249px;
+    height: 339px;
 }
 .contact_block{
     width: 1249px;
     height: 245px;
-    background-color: aqua;
+    display: flex;
+    gap: 160px;
 }
-
+.left_block{
+    width: 284px;
+    height: 138px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-transform: none;
+}
+.social_icons{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+.left_block p{
+    color: #2B2C34;
+    font-size: 18px;
+    font-weight: 400;
+}
+.right_block{
+    width: 805px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: #2B2C34;
+    font-size: 18px;
+    font-weight: 400;
+}
+.right_block>div>p:first-child{
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+}
+.right_block>div>a{
+    display: block;
+    margin-bottom: 20px;
+}
+.get_in_touch_block>p{
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: none;
+}
 footer hr{
     width: 1249px;
     border: 1px solid #C0C0C0;
+    margin: 50px 0 26px ;
 }
 footer p{
     color: #2B2C34;
