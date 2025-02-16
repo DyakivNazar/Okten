@@ -84,9 +84,9 @@ document.write(`<h2>Taks 9</h2>`);
 function UsersList(users) {
     for (const user of users){
         document.write(` <div>
-        <p>${user.id}</p>
-        <p>${user.name}</p>
-        <p>${user.age}</p>
+        ${user.id}
+        ${user.name}
+        ${user.age}
         </div>`)
     }
 }
