@@ -107,6 +107,49 @@ function minNumber(arr) {
 }
 let arr = [6, 98, 4, -2, 10];
 console.log(minNumber(arr))
+//OR
+function minNum(numbers) {
+    let min = numbers[0];
+    for (let i = 1; i < numbers.length; i++) {
+        let number = numbers[i];
+        if (number < min) {
+            min = number;
+        }
+    }
+    return min;
+}
+console.log(minNum(arr));
 
 
-//Task 11 EKRNVPM
+//Task 11
+function sumArr(arrs) {
+    let total = 0;
+    for (const num of arrs) {
+        total += num;
+    }
+    return total;
+}
+console.log(sumArr([1,2,10]))
+
+
+//Task 12
+function swapArr(arrs, index1, index2) {
+    let temp = arrs[index1];
+    arrs[index1] = arrs[index2];
+    arrs[index2] = temp;
+    return arrs;
+}
+console.log(swapArr([11, 22, 33, 44], 2, 1));
+
+
+//Task 13
+function exchange(sumUAH,currencyValues,exchangeCurrency) {
+    let result = 0;
+    for (const key in currencyValues) {
+        if (exchangeCurrency === currencyValues[key].currency){
+            result = sumUAH / currencyValues[key].value
+        }
+    }
+    return result;
+}
+console.log(exchange(10000, [{currency: 'USD', value: 25}, {currency: 'EUR', value: 42}], 'USD'));
