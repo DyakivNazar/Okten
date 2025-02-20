@@ -202,3 +202,74 @@ console.log(car1);
 //Task 8
 console.log('');
 console.log('Task 8');
+
+class Cinderella{
+    constructor(name, age, foot_size) {
+        this.name = name;
+        this.age = age;
+        this.foot_size = foot_size;
+    }
+}
+
+class Prince extends Cinderella{
+    constructor(name, age, foot_size) {
+        super(name, age, foot_size);
+    }
+}
+
+let cinderellas = [
+    new Cinderella('Sara', 18, 35),
+    new Cinderella('Vika', 17, 36),
+    new Cinderella('Lilya', 19, 37),
+    new Cinderella('Rita', 20, 38),
+    new Cinderella('Tetya', 21, 39),
+    new Cinderella('Jyli', 22, 40),
+    new Cinderella('Katya', 23, 41),
+    new Cinderella('Nana', 25, 37),
+    new Cinderella('Diana', 30, 36),
+    new Cinderella('Anna', 35, 38)
+];
+
+let prince = new Prince('Jonefik', 25, 38);
+
+let findCinOfPrinc = []
+for (const cinderellasKey of cinderellas) {
+    if (cinderellasKey.foot_size === prince.foot_size) {
+        findCinOfPrinc.push(cinderellasKey);
+    }
+}
+
+console.log(findCinOfPrinc);
+
+console.log(cinderellas.find(value => value.foot_size === prince.foot_size));
+
+
+//Task 9
+console.log('');
+console.log('Task 9');
+
+Array.prototype.MyForeach = function (value, index, array) {
+    index = 0;
+    for (const item of this) {
+        value(item, index, this);
+        index++;
+    }
+}
+Array.prototype.MyFilter = function (value, index, array) {
+    index = 0;
+    let arr = [];
+    for (const item of this) {
+        if (value(item, index, this)) {
+            arr.push(item);
+        }
+        index++;
+    }
+    return arr;
+}
+cinderellas.MyForeach((item) => {
+    console.log(item);
+});
+
+const result = cinderellas.MyFilter((value) => value.foot_size >= 38);
+console.log(result);
+
