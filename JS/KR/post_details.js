@@ -1,8 +1,8 @@
 async function post_details(postId) {
-    let posts = fetch('https://jsonplaceholder.typicode.com/posts')
+    let posts = await fetch('https://jsonplaceholder.typicode.com/posts')
         .then(value => value.json());
 
-    let comments = fetch('https://jsonplaceholder.typicode.com/comments')
+    let comments = await fetch('https://jsonplaceholder.typicode.com/comments')
         .then(value => value.json());
 
     let filteredPostsPromise = Promise.all([posts, comments]).then(result  => {
